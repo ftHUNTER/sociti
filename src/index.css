@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* App base overrides */
+html, body, #root {
+  height: 100%;
+}
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
