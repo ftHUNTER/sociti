@@ -2,8 +2,34 @@ import heroLogo from './assets/WhatsApp Image 2025-10-11 at 7.13.49 PM.jpeg'
 import gallery1 from './assets/WhatsApp Image 2025-10-11 at 7.13.50 PM.jpeg'
 import gallery2 from './assets/WhatsApp Image 2025-10-11 at 7.13.52 PM.jpeg'
 import gallery3 from './assets/WhatsApp Image 2025-10-11 at 7.13.52 PM (1).jpeg'
+import { Lightbulb, Briefcase, Compass, FileText } from "lucide-react";
+
 
 export default function App() {
+
+    const steps = [
+      {
+        icon: <Lightbulb className="w-6 h-6 text-indigo-600 z-10" />,
+        title: "Diagnostic des Compétences",
+        text: "Évaluation complète de vos aptitudes, talents et potentiels à travers des outils d'assessment innovants qui révèlent vos forces cachées et identifient les domaines de développement prioritaires.",
+      },
+      {
+        icon: <Briefcase className="w-6 h-6 text-indigo-600 z-10" />,
+        title: "Découverte des Secteurs et Métiers",
+        text: "Exploration approfondie des opportunités professionnelles dans différents secteurs d'activité, avec une analyse détaillée des tendances du marché et des compétences recherchées par les employeurs.",
+      },
+      {
+        icon: <Compass className="w-6 h-6 text-indigo-600 z-10 " />,
+        title: "Construction du Projet Professionnel",
+        text: "Élaboration d'un plan de carrière personnalisé et réaliste, aligné sur vos aspirations et les réalités du marché, avec des objectifs clairs et des étapes concrètes à suivre.",
+      },
+      {
+        icon: <FileText className="w-6 h-6 text-indigo-600 z-10" />,
+        title: "CV et Accès aux Opportunités",
+        text: "Création d'un CV professionnel optimisé et accès privilégié à notre réseau d'opportunités d'insertion professionnelle, stages et emplois dans votre domaine de prédilection.",
+      },
+    ];
+  
   return (
     <div className="min-h-dvh flex flex-col bg-white text-neutral-900">
       {/* Navbar */}
@@ -47,49 +73,35 @@ export default function App() {
       </div>
       </section>
 
-      {/* Programs/Initiatives Gallery */}
-      <section id="programs" className="bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-20">
-          <h3 className="text-2xl md:text-3xl font-bold">Découvrir nos programmes</h3>
-          <p className="mt-3 text-neutral-700 max-w-3xl">Un écosystème d'initiatives pour les jeunes, les femmes et la transition verte.</p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
-              <img src={gallery1} alt="Youth Impact Initiatives" className="h-56 w-full object-cover" />
-              <div className="p-4">
-                <h4 className="font-semibold">Youth Impact Initiatives</h4>
-                <p className="mt-1 text-sm text-neutral-700">Passeports Orientation, Compétences et Entrepreneuriat.</p>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
-              <img src={gallery2} alt="Women Impact Initiatives" className="h-56 w-full object-cover" />
-              <div className="p-4">
-                <h4 className="font-semibold">Women Impact Initiatives</h4>
-                <p className="mt-1 text-sm text-neutral-700">Autonomisation, coaching, mentoring et insertion.</p>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white">
-              <img src={gallery3} alt="Green Impact Initiatives" className="h-56 w-full object-cover" />
-              <div className="p-4">
-                <h4 className="font-semibold">Green Impact Initiatives</h4>
-                <p className="mt-1 text-sm text-neutral-700">Durabilité, économie circulaire et transition verte.</p>
-              </div>
+      {/* Programs/Initiatives Gallery - removed as requested */}
+
+      {/* Mission */}
+      <section id="mission" className="mx-auto max-w-6xl px-4 py-16">
+        <h2 className="text-2xl md:text-3xl font-bold">Notre Mission : Transformer la Recherche en Action</h2>
+        <div className="mt-6 grid md:grid-cols-2 gap-10 items-start">
+          <div className="space-y-4 text-neutral-700">
+            <p>
+              Face au constat que la recherche et les études d'impact restent trop rarement traduites en actions concrètes, Positive Impact Initiatives a été créée pour rapprocher la théorie du terrain et agir ainsi dans la durée pour impacter positivement notre société.
+            </p>
+            <p>
+              Nos champs d'actions s'inspirent de la vision royale, des recommandations du Nouveau Modèle de Développement et des Objectifs de Développement Durable. Cette approche intégrée nous permet de créer des solutions durables et mesurables qui répondent aux défis contemporains de notre époque.
+            </p>
+            <p>
+              Notre plateforme révolutionnaire connecte les jeunes, les femmes et les acteurs du changement avec des opportunités concrètes de développement personnel et professionnel, créant ainsi un écosystème d'impact positif et durable.
+            </p>
+          </div>
+          <div className="w-full">
+            <div className="aspect-video w-full overflow-hidden rounded-2xl ring-1 ring-neutral-200 bg-white shadow-sm">
+              <img src={heroLogo} alt="Positive Impact Initiatives" className="h-full w-full object-contain bg-white" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission */}
-      <section id="mission" className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold">Notre Mission : Transformer la Recherche en Action</h2>
-        <p className="mt-4 text-neutral-600 max-w-3xl">
-          Nous rapprochons la théorie du terrain et agissons dans la durée pour un impact positif durable.
-        </p>
-      </section>
-
       {/* Domains */}
       <section id="domains" className="bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-20">
-          <h3 className="text-xl font-semibold">Nos Domaines d'Action Prioritaires</h3>
+          <h3 className="text-2xl md:text-3xl font-bold">Nos Domaines d'Action Prioritaires</h3>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {/* Card */}
             <div className="group rounded-2xl bg-[#F4F0FF] ring-1 ring-[#BFA9FF]/60 p-6 transition-shadow hover:shadow-md">
@@ -102,12 +114,10 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Inclusion Socio-Économique des Jeunes NEETs</h4>
-                  <p className="mt-2 text-neutral-700 text-sm">Parcours personnalisés pour transformer les potentiels en opportunités concrètes.</p>
+                  <p className="mt-2 text-neutral-700 text-sm">Favoriser l'inclusion socio-économique et l'amélioration de l'employabilité des jeunes qui ne sont ni en emploi, ni en éducation, ni en formation. Nous développons des parcours personnalisés qui transforment les potentiels en opportunités concrètes.</p>
                 </div>
               </div>
-              <div className="mt-5">
-                <a href="#young" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">Découvrir<span>→</span></a>
-              </div>
+              
             </div>
 
             {/* Card */}
@@ -121,12 +131,10 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Accompagnement des Femmes Vulnérables</h4>
-                  <p className="mt-2 text-neutral-700 text-sm">Renforcement des capacités, coaching et mentoring pour l'empowerment féminin.</p>
+                  <p className="mt-2 text-neutral-700 text-sm">Renforcer les capacités des femmes en situation de vulnérabilité et promouvoir l'empowerment féminin à travers des programmes d'accompagnement adaptés qui valorisent leurs compétences et créent des opportunités d'autonomisation.</p>
                 </div>
               </div>
-              <div className="mt-5">
-                <a href="#women" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">Découvrir<span>→</span></a>
-              </div>
+              
             </div>
 
             {/* Card */}
@@ -139,12 +147,10 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Durabilité et Transition Verte</h4>
-                  <p className="mt-2 text-neutral-700 text-sm">Initiatives innovantes alliant impact environnemental et création de valeur durable.</p>
+                  <p className="mt-2 text-neutral-700 text-sm">Promouvoir la durabilité, l'économie circulaire et la transition verte en développant des initiatives innovantes qui allient impact environnemental positif et création de valeur économique durable pour les communautés.</p>
                 </div>
               </div>
-              <div className="mt-5">
-                <a href="#training" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">Découvrir<span>→</span></a>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -163,7 +169,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Engagement</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Agir avec conviction pour transformer la recherche en actions concrètes et mesurables, avec une approche rigoureuse et déterminée.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Agir avec conviction pour transformer la recherche en actions concrètes et mesurables. Notre engagement se traduit par une approche rigoureuse et une détermination sans faille à créer un impact positif durable dans nos communautés.</p>
             </div>
           </div>
 
@@ -177,7 +183,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Innovation Sociale</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Créer des solutions nouvelles et adaptées aux défis réels en maximisant l'impact social et économique.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Créer des solutions nouvelles et adaptées aux défis réels de notre société. Nous développons des approches innovantes qui répondent aux besoins spécifiques de nos bénéficiaires tout en maximisant l'impact social et économique.</p>
             </div>
           </div>
 
@@ -191,7 +197,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Inclusion</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Offrir des opportunités équitables aux jeunes et aux femmes pour accéder aux ressources et au soutien nécessaires.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Offrir aux jeunes et aux femmes des opportunités équitables de développement et d'épanouissement. Notre approche inclusive garantit que chacun puisse accéder aux ressources et au soutien nécessaires pour réaliser son potentiel.</p>
             </div>
           </div>
 
@@ -204,7 +210,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Durabilité</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Inscrire nos actions dans le long terme afin d'assurer la pérennité des impacts générés.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Inscrire nos actions dans une logique de long terme qui assure la pérennité de nos impacts. Nous construisons des solutions durables qui continuent à générer de la valeur bien au-delà de nos interventions directes.</p>
             </div>
           </div>
 
@@ -218,7 +224,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Collaboration</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Construire des synergies avec nos partenaires pour maximiser l'impact de nos initiatives.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Construire des synergies avec nos partenaires pour maximiser l'impact de nos initiatives. La collaboration est au cœur de notre approche, permettant de créer un écosystème d'acteurs engagés vers un objectif commun.</p>
             </div>
           </div>
 
@@ -232,7 +238,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Transparence & Mesurabilité</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Produire des effets réels, mesurables et documentés avec une transparence totale sur nos méthodes et résultats.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Produire des effets réels, mesurables et durables en maintenant une transparence totale sur nos méthodes et résultats. Chaque action est évaluée et documentée pour assurer une amélioration continue de nos pratiques.</p>
             </div>
           </div>
         </div>
@@ -248,33 +254,65 @@ export default function App() {
               <img src={gallery1} alt="Youth Impact Initiatives" className="w-full max-w-md h-auto object-contain" />
             </div>
             <p className="text-neutral-700 max-w-3xl md:w-1/2">
-              Diagnostic personnalisé, formation qualifiante et accompagnement entrepreneurial pour transformer les aspirations en réalisations.
-            </p>
+            Construisez votre avenir avec nos passeports personnalisés
+Notre plateforme révolutionnaire est spécialement conçue pour accompagner les jeunes dans leur parcours de développement professionnel et personnel. Grâce à nos trois passeports innovants, nous offrons un accompagnement complet et personnalisé qui transforme les aspirations en réalisations concrètes.
+Chaque parcours est conçu pour répondre aux besoins spécifiques des jeunes d'aujourd'hui, en combinant diagnostic personnalisé, formation qualifiante et accompagnement entrepreneurial. Notre approche holistique garantit un développement complet des compétences et une préparation optimale au marché du travail.            </p>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl bg-white p-6 shadow-sm border">
-              <div className="text-sm font-semibold text-[#632DE9]">01</div>
-              <h4 className="mt-2 font-semibold">Passeport Orientation Jeunes</h4>
-              <p className="mt-2 text-neutral-700">Choisissez votre métier d'avenir grâce à un diagnostic avancé.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3 ">
+            <div className="rounded-xl  bg-white bg-cover bg-center  p-6 shadow-sm border">
+              <div className="text-sm font-semibold text-[#632DE9] ">01</div>
+              <h4 className="mt-2 font-semibold text-black">Passeport Orientation Jeunes</h4>
+              <p className="mt-2 text-neutral-700 text-black">Choisissez votre secteur et votre métier d'avenir grâce à notre système de diagnostic avancé qui identifie vos talents naturels et vos aspirations professionnelles.</p>
+              <img src="/src/assets/passport.jpeg" className=" " />
             </div>
             <div className="rounded-xl bg-white p-6 shadow-sm border">
               <div className="text-sm font-semibold text-[#632DE9]">02</div>
               <h4 className="mt-2 font-semibold">Passeport Compétences Jeunes</h4>
-              <p className="mt-2 text-neutral-700">Acquérez les compétences essentielles via des formations qualifiantes.</p>
+              <p className="mt-2 text-neutral-700">Découvrez les compétences essentielles et apprenez comment les acquérir à travers notre catalogue de formations qualifiantes en soft skills, langues et métiers..</p>
+              <img src="/src/assets/passport2.jpeg" className=" " />
             </div>
             <div className="rounded-xl bg-white p-6 shadow-sm border">
               <div className="text-sm font-semibold text-[#632DE9]">03</div>
               <h4 className="mt-2 font-semibold">Passeport Entrepreneuriat Jeunes</h4>
-              <p className="mt-2 text-neutral-700">De l'idée à la concrétisation avec un accompagnement complet.</p>
+              <p className="mt-2 text-neutral-700">Transformez votre projet en réalité grâce à notre offre de valeur entrepreneuriale complète qui vous accompagne de l'idée à la concrétisation.</p>
+              <img src="/src/assets/passport3.jpeg" className=" " />
             </div>
           </div>
         </div>
       </section>
+      <section className="py-16 px-4 bg-white text-gray-900 max-w-6xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">
+        Parcours d'Accompagnement Personnalisé
+      </h2>
+
+      <div className="grid md:grid-cols-2 gap-10">
+        {steps.map((step, index) => (
+          <div key={index} className="flex items-start gap-4">
+            {/* Arrow shape with icon */}
+            <div className="relative flex items-center justify-center w-24 h-16 bg-[#E7E6FA] rounded-md">
+              <div className="absolute right-[-14px] top-0 h-16 w-7 bg-[#E7E6FA] clip-path-arrow" />
+              <div className="relative left-[-4px] flex items-center justify-center">
+                {step.icon}
+              </div>
+            </div>
+            {/* Text content */}
+            <div>
+              <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
+              <p className="text-sm leading-relaxed text-gray-700">
+                {step.text}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Training */}
       <section id="training" className="mx-auto max-w-6xl px-4 py-20">
         <h3 className="text-2xl md:text-3xl font-bold">Catalogue de Formations Qualifiantes</h3>
-        <p className="mt-3 text-neutral-700 max-w-3xl">Développez vos compétences avec des programmes complets et certifiants, alliant théorie, pratique et mise en situation réelle.</p>
+        <p className="mt-3 text-neutral-700 max-w-3xl">Développez vos compétences avec nos formations expertes
+Notre catalogue de formations qualifiantes est conçu pour répondre aux exigences du marché du travail moderne. Nous proposons des programmes complets et certifiants qui vous permettent d'acquérir les compétences les plus recherchées par les employeurs d'aujourd'hui.
+Chaque formation est dispensée par des experts reconnus dans leur domaine et combine théorie pratique et mise en situation réelle. Les participants bénéficient d'un suivi personnalisé et d'un accompagnement post-formation pour maximiser leur insertion professionnelle.</p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {/* Soft Skills */}
           <div className="group rounded-2xl bg-[#F4F0FF] ring-1 ring-[#BFA9FF]/60 p-6 transition-shadow hover:shadow-md">
@@ -287,11 +325,11 @@ export default function App() {
               </div>
               <div>
                 <h4 className="font-semibold">Soft Skills</h4>
-                <p className="mt-2 text-neutral-700 text-sm">Communication, leadership, gestion du temps, travail en équipe, résolution de problèmes et intelligence émotionnelle.</p>
+                <p className="mt-2 text-neutral-700 text-sm">Développez vos compétences comportementales essentielles : communication, leadership, gestion du temps, travail en équipe, résolution de problèmes et intelligence émotionnelle pour exceller dans votre environnement professionnel.</p>
               </div>
             </div>
             <div className="mt-5">
-              <a href="#" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">S'inscrire à une formation<span>→</span></a>
+              {/* <a href="#" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">S'inscrire à une formation<span>→</span></a> */}
             </div>
           </div>
 
@@ -306,11 +344,11 @@ export default function App() {
               </div>
               <div>
                 <h4 className="font-semibold">Langues</h4>
-                <p className="mt-2 text-neutral-700 text-sm">Programmes intensifs adaptés au monde professionnel : anglais, français, espagnol et arabe des affaires.</p>
+                <p className="mt-2 text-neutral-700 text-sm">Maîtrisez les langues internationales avec nos programmes intensifs d'apprentissage linguistique adaptés au monde professionnel, incluant l'anglais, le français, l'espagnol et l'arabe des affaires.</p>
               </div>
             </div>
             <div className="mt-5">
-              <a href="#" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">S'inscrire à une formation<span>→</span></a>
+              {/* <a href="#" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">S'inscrire à une formation<span>→</span></a> */}
             </div>
           </div>
 
@@ -325,11 +363,11 @@ export default function App() {
               </div>
               <div>
                 <h4 className="font-semibold">Métiers</h4>
-                <p className="mt-2 text-neutral-700 text-sm">Compétences techniques spécifiques à votre secteur pour une insertion professionnelle rapide et durable.</p>
+                <p className="mt-2 text-neutral-700 text-sm">Acquérez les compétences techniques spécifiques à votre secteur d'activité grâce à nos formations métiers complètes qui vous préparent directement aux exigences de votre futur emploi.</p>
               </div>
             </div>
             <div className="mt-5">
-              <a href="#" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">S'inscrire à une formation<span>→</span></a>
+              {/* <a href="#" className="inline-flex items-center gap-2 rounded-md bg-[#632DE9] px-4 py-2 text-white text-sm font-medium hover:bg-[#5321d0]">S'inscrire à une formation<span>→</span></a> */}
             </div>
           </div>
       </div>
@@ -383,6 +421,7 @@ export default function App() {
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer id="contact" className="border-t">
