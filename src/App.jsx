@@ -263,19 +263,19 @@ Chaque parcours est conçu pour répondre aux besoins spécifiques des jeunes d'
               <div className="text-sm font-semibold text-[#632DE9] ">01</div>
               <h4 className="mt-2 font-semibold text-black">Passeport Orientation Jeunes</h4>
               <p className="mt-2 text-neutral-700 text-black">Choisissez votre secteur et votre métier d'avenir grâce à notre système de diagnostic avancé qui identifie vos talents naturels et vos aspirations professionnelles.</p>
-              <img src="/src/assets/passport.jpeg" className=" " />
+              <img src="passport.jpeg" className=" " />
             </div>
             <div className="rounded-xl bg-white p-6 shadow-sm border">
               <div className="text-sm font-semibold text-[#632DE9]">02</div>
               <h4 className="mt-2 font-semibold">Passeport Compétences Jeunes</h4>
               <p className="mt-2 text-neutral-700">Découvrez les compétences essentielles et apprenez comment les acquérir à travers notre catalogue de formations qualifiantes en soft skills, langues et métiers..</p>
-              <img src="/src/assets/passport2.jpeg" className=" " />
+              <img src="passport2.jpeg" className=" " />
             </div>
             <div className="rounded-xl bg-white p-6 shadow-sm border">
               <div className="text-sm font-semibold text-[#632DE9]">03</div>
               <h4 className="mt-2 font-semibold">Passeport Entrepreneuriat Jeunes</h4>
               <p className="mt-2 text-neutral-700">Transformez votre projet en réalité grâce à notre offre de valeur entrepreneuriale complète qui vous accompagne de l'idée à la concrétisation.</p>
-              <img src="/src/assets/passport3.jpeg" className=" " />
+              <img src="passport3.jpeg" className=" " />
             </div>
           </div>
         </div>
