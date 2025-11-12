@@ -7,6 +7,14 @@ import { Lightbulb, Briefcase, Compass, FileText } from "lucide-react";
 
 export default function App() {
 
+
+  const photos = [
+  "https://picsum.photos/id/1011/300/200",
+  "https://picsum.photos/id/1012/300/200",
+  "https://picsum.photos/id/1013/300/200",
+  "https://picsum.photos/id/1015/300/200",
+  "https://picsum.photos/id/1016/300/200",
+];
     const steps = [
       {
         icon: <Lightbulb className="w-6 h-6 text-indigo-600 z-10" />,
@@ -40,6 +48,7 @@ export default function App() {
             <a href="#mission" className="hover:text-[#632DE9]">Mission</a>
             <a href="#domains" className="hover:text-[#632DE9]">Domaines</a>
             <a href="#values" className="hover:text-[#632DE9]">Valeurs</a>
+            <a href="#value-add" className="hover:text-[#632DE9]">Valeur ajoutée</a>
             <a href="#young" className="hover:text-[#632DE9]">Jeunes</a>
             <a href="#training" className="hover:text-[#632DE9]">Formations</a>
             <a href="#women" className="hover:text-[#632DE9]">Femmes</a>
@@ -62,7 +71,7 @@ export default function App() {
               « Parce que nous croyons que chacun peut devenir un catalyseur de changement, et que l'action concrète est la clé d'effets significatifs, durables et mesurables, nous construisons, avec vous, un monde meilleur. »
             </p>
             <div className="mt-10 flex gap-3">
-              <a href="#programs" className="rounded-md bg-[#632DE9] px-6 py-3.5 text-white font-semibold hover:bg-[#5321d0]">Découvrir nos initiatives</a>
+              <a href="/programs" className="rounded-md bg-[#632DE9] px-6 py-3.5 text-white font-semibold hover:bg-[#5321d0]">Découvrir nos initiatives</a>
             </div>
           </div>
           <div className="w-full">
@@ -77,17 +86,14 @@ export default function App() {
 
       {/* Mission */}
       <section id="mission" className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold">Notre Mission : Transformer la Recherche en Action</h2>
+        <h2 className="text-2xl md:text-3xl font-bold">Qui sommes nous ? Vision et inspirations</h2>
         <div className="mt-6 grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-4 text-neutral-700">
             <p>
-              Face au constat que la recherche et les études d'impact restent trop rarement traduites en actions concrètes, Positive Impact Initiatives a été créée pour rapprocher la théorie du terrain et agir ainsi dans la durée pour impacter positivement notre société.
+              Positive Impact Initiatives (PI²) est une plateforme d’impact qui s’inscrit dans vision royale pour un développement humain, durable et inclusif. Sa dynamique d’action repose sur la concrétisation des recommandations du Nouveau Modèle de Développement (NMD), qui placent la jeunesse, l’équité territoriale et l’innovation au cœur de la transformation nationale, mais également sur les orientations globales des Objectifs de Développement Durable (ODD), notamment l’accès à une éducation et un emploi décents, l’égalité des genres et l’action pour le climat.
             </p>
             <p>
-              Nos champs d'actions s'inspirent de la vision royale, des recommandations du Nouveau Modèle de Développement et des Objectifs de Développement Durable. Cette approche intégrée nous permet de créer des solutions durables et mesurables qui répondent aux défis contemporains de notre époque.
-            </p>
-            <p>
-              Notre plateforme révolutionnaire connecte les jeunes, les femmes et les acteurs du changement avec des opportunités concrètes de développement personnel et professionnel, créant ainsi un écosystème d'impact positif et durable.
+              Positive Impact Initiatives (PI²) est une initiative panafricaine née de la volonté de transformer les résultats des recherches, des études et des enquêtes en actions concrètes et durables au service des territoires et des populations vulnérables. En effet, la plateforme réagit à un constat fondateur : Trop souvent, les résultats des enquêtes et études et les recommandations issus de projets de recherche ne se traduisent pas en impacts tangibles. Positive Impact Initiatives (PI²) se donne pour mission de combler ce fossé entre la connaissance et l’action, en rapprochant le savoir académique et scientifique des réalités concrètes du terrain, et en transformant les recommandations en programmes opérationnels durables.
             </p>
           </div>
           <div className="w-full">
@@ -98,67 +104,75 @@ export default function App() {
         </div>
       </section>
 
-      {/* Domains */}
+      {/* Domains / Platforms */}
       <section id="domains" className="bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-20">
-          <h3 className="text-2xl md:text-3xl font-bold">Nos Domaines d'Action Prioritaires</h3>
+          <h3 className="text-2xl md:text-3xl font-bold">Champs d’actions et plateformes d’impact</h3>
+          <p className="mt-3 text-neutral-700 max-w-4xl">
+            Positive Impact Initiatives (PI²) agit dans la durée autour de trois priorités stratégiques à fort impact.
+          </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {/* Card */}
+            {/* YI² */}
             <div className="group rounded-2xl bg-[#F4F0FF] ring-1 ring-[#BFA9FF]/60 p-6 transition-shadow hover:shadow-md">
               <div className="flex items-start gap-3">
-                <div className="shrink-0 h-10 w-10 rounded-full bg-white grid place-items-center ring-1 ring-[#BFA9FF]/70 text-[#632DE9]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" />
-                  </svg>
+                <div className="shrink-0 h-12 w-12 rounded-full bg-white grid place-items-center ring-1 ring-[#BFA9FF]/70">
+                  <img src={gallery1} alt="Youth Impact Initiatives" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Inclusion Socio-Économique des Jeunes NEETs</h4>
-                  <p className="mt-2 text-neutral-700 text-sm">Favoriser l'inclusion socio-économique et l'amélioration de l'employabilité des jeunes qui ne sont ni en emploi, ni en éducation, ni en formation. Nous développons des parcours personnalisés qui transforment les potentiels en opportunités concrètes.</p>
+                  <h4 className="font-semibold">Inclusion socio-économique des jeunes NEETs — Youth Impact Initiatives (YI²)</h4>
+                  <p className="mt-2 text-neutral-700 text-sm">Le programme CAP Jeunes vise l’orientation, la construction du projet professionnel et le renforcement des compétences pour améliorer l’employabilité, via plusieurs passeports :</p>
+                  <ul className="mt-2 text-neutral-700 text-sm list-disc pl-5 space-y-1">
+                    <li><strong>Cap Pro</strong> : s’orienter</li>
+                    <li><strong>Pass Pro</strong> : élaborer son projet</li>
+                    <li><strong>Pass Compétences</strong> : se former</li>
+                    <li><strong>Pass Entreprendre</strong> : créer un projet</li>
+                  </ul>
                 </div>
               </div>
-              
             </div>
 
-            {/* Card */}
+            {/* WI² */}
             <div className="group rounded-2xl bg-[#F4F0FF] ring-1 ring-[#BFA9FF]/60 p-6 transition-shadow hover:shadow-md">
               <div className="flex items-start gap-3">
-                <div className="shrink-0 h-10 w-10 rounded-full bg-white grid place-items-center ring-1 ring-[#BFA9FF]/70 text-[#632DE9]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-                    <path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
-                    <path d="M4 20a8 8 0 0 1 16 0"/>
-                  </svg>
+                <div className="shrink-0 h-12 w-12 rounded-full bg-white grid place-items-center ring-1 ring-[#BFA9FF]/70">
+                  <img src={gallery2} alt="Women Impact Initiatives" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Accompagnement des Femmes Vulnérables</h4>
-                  <p className="mt-2 text-neutral-700 text-sm">Renforcer les capacités des femmes en situation de vulnérabilité et promouvoir l'empowerment féminin à travers des programmes d'accompagnement adaptés qui valorisent leurs compétences et créent des opportunités d'autonomisation.</p>
+                  <h4 className="font-semibold">Accompagnement des femmes et leadership — Women Impact Initiatives (WI²)</h4>
+                  <p className="mt-2 text-neutral-700 text-sm">Le programme CAP Elles renforce les capacités, l’autonomisation économique et l’inclusion sociale à travers&nbsp;:</p>
+                  <ul className="mt-2 text-neutral-700 text-sm list-disc pl-5 space-y-1">
+                    <li><strong>Passeport Inclusion Elles</strong></li>
+                    <li><strong>Passeport Leadership Elles</strong> : promotion du leadership féminin et accès aux opportunités</li>
+                  </ul>
                 </div>
               </div>
-              
             </div>
 
-            {/* Card */}
+            {/* GI² */}
             <div className="group rounded-2xl bg-[#F4F0FF] ring-1 ring-[#BFA9FF]/60 p-6 transition-shadow hover:shadow-md">
               <div className="flex items-start gap-3">
-                <div className="shrink-0 h-10 w-10 rounded-full bg-white grid place-items-center ring-1 ring-[#BFA9FF]/70 text-[#632DE9]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-                    <path d="M12 20c0-4.418 3.582-8 8-8-4.418 0-8-3.582-8-8 0 4.418-3.582 8-8 8 4.418 0 8 3.582 8 8Z"/>
-                  </svg>
+                <div className="shrink-0 h-12 w-12 rounded-full bg-white grid place-items-center ring-1 ring-[#BFA9FF]/70">
+                  <img src={gallery3} alt="Green Impact Initiatives" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Durabilité et Transition Verte</h4>
-                  <p className="mt-2 text-neutral-700 text-sm">Promouvoir la durabilité, l'économie circulaire et la transition verte en développant des initiatives innovantes qui allient impact environnemental positif et création de valeur économique durable pour les communautés.</p>
+                  <h4 className="font-semibold">Durabilité — Green Impact Initiatives (GI²)</h4>
+                  <p className="mt-2 text-neutral-700 text-sm">Le programme CAP Green sensibilise à la transition écologique et crée des emplois durables via des actions de sensibilisation, de formation et d’appui à l’économie circulaire et aux énergies propres&nbsp;:</p>
+                  <ul className="mt-2 text-neutral-700 text-sm list-disc pl-5 space-y-1">
+                    <li><strong>Passeport Vert</strong></li>
+                  </ul>
                 </div>
               </div>
-              
             </div>
           </div>
+          <p className="mt-8 text-neutral-700 max-w-5xl">
+            Le déploiement des programmes s’appuie sur des dispositifs hybrides croisant digital, terrain et supports médias pour rapprocher les opportunités, notamment en milieu rural.
+          </p>
         </div>
       </section>
 
       {/* Values */}
       <section id="values" className="mx-auto max-w-6xl px-4 py-20">
-        <h3 className="text-3xl font-extrabold">Nos Valeurs Fondamentales</h3>
+        <h3 className="text-3xl font-extrabold">Nos valeurs</h3>
         <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-2">
           {/* Engagement */}
           <div className="flex items-start gap-4">
@@ -169,7 +183,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Engagement</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Agir avec conviction pour transformer la recherche en actions concrètes et mesurables. Notre engagement se traduit par une approche rigoureuse et une détermination sans faille à créer un impact positif durable dans nos communautés.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Transformer la recherche en actions concrètes.</p>
             </div>
           </div>
 
@@ -182,8 +196,8 @@ export default function App() {
               </svg>
             </div>
             <div>
-              <h4 className="font-semibold">Innovation Sociale</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Créer des solutions nouvelles et adaptées aux défis réels de notre société. Nous développons des approches innovantes qui répondent aux besoins spécifiques de nos bénéficiaires tout en maximisant l'impact social et économique.</p>
+              <h4 className="font-semibold">Innovation sociale</h4>
+              <p className="mt-2 text-neutral-700 text-sm">Créer des solutions nouvelles adaptées aux défis réels.</p>
             </div>
           </div>
 
@@ -197,7 +211,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Inclusion</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Offrir aux jeunes et aux femmes des opportunités équitables de développement et d'épanouissement. Notre approche inclusive garantit que chacun puisse accéder aux ressources et au soutien nécessaires pour réaliser son potentiel.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Offrir aux jeunes et aux femmes des opportunités concrètes.</p>
             </div>
           </div>
 
@@ -210,7 +224,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Durabilité</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Inscrire nos actions dans une logique de long terme qui assure la pérennité de nos impacts. Nous construisons des solutions durables qui continuent à générer de la valeur bien au-delà de nos interventions directes.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Inscrire toutes nos actions dans le long terme.</p>
             </div>
           </div>
 
@@ -224,7 +238,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Collaboration</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Construire des synergies avec nos partenaires pour maximiser l'impact de nos initiatives. La collaboration est au cœur de notre approche, permettant de créer un écosystème d'acteurs engagés vers un objectif commun.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Construire des synergies avec les acteurs publics, privés et associatifs.</p>
             </div>
           </div>
 
@@ -238,8 +252,27 @@ export default function App() {
             </div>
             <div>
               <h4 className="font-semibold">Transparence & Mesurabilité</h4>
-              <p className="mt-2 text-neutral-700 text-sm">Produire des effets réels, mesurables et durables en maintenant une transparence totale sur nos méthodes et résultats. Chaque action est évaluée et documentée pour assurer une amélioration continue de nos pratiques.</p>
+              <p className="mt-2 text-neutral-700 text-sm">Produire des effets réels, mesurables et durables.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Add */}
+      <section id="value-add" className="mx-auto max-w-6xl px-4 py-20">
+        <h3 className="text-2xl md:text-3xl font-bold">Notre valeur ajoutée</h3>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 shadow-sm">
+            <h4 className="font-semibold">Approche recherche-action</h4>
+            <p className="mt-2 text-neutral-700 text-sm">Partir de l’évidence scientifique et de recommandations justifiées pour aboutir à des solutions concrètes.</p>
+          </div>
+          <div className="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 shadow-sm">
+            <h4 className="font-semibold">Modèle hybride</h4>
+            <p className="mt-2 text-neutral-700 text-sm">Combiner innovation digitale et médias avec la proximité humaine.</p>
+          </div>
+          <div className="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 shadow-sm">
+            <h4 className="font-semibold">Vision panafricaine</h4>
+            <p className="mt-2 text-neutral-700 text-sm">Faire émerger une nouvelle génération d’initiatives porteuses d’espoir, de progrès et d’impact durable.</p>
           </div>
         </div>
       </section>
@@ -408,16 +441,24 @@ Chaque formation est dispensée par des experts reconnus dans leur domaine et co
         </div>
       </section>
 
+
       {/* CTA */}
       <section id="contact" className="relative isolate bg-gradient-to-r from-[#632DE9] to-[#5321d0] text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl font-bold">Rejoignez notre écosystème d'impact</h3>
             <p className="mt-2 text-white/80 max-w-2xl">Partenariats, opportunités, médias et réseaux sociaux pour amplifier votre impact.</p>
+            <div className="mt-3 text-white/90 text-sm space-y-1">
+              <p>
+                Téléphone : <a href="tel:0647473550" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white/40">06 47 47 35 50</a>
+              </p>
+              <p>
+                E-mail : <a href="mailto:positifimpactafrica@gmail.com" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white/40">positifimpactafrica@gmail.com</a>
+              </p>
+            </div>
           </div>
           <div className="flex gap-3">
-            <a href="#" className="rounded-md bg-white text-[#632DE9] px-5 py-3 font-medium hover:bg-white/90">Nous contacter</a>
-            <a href="#programs" className="rounded-md bg-white/15 px-5 py-3 font-medium hover:bg-white/25">Découvrir nos programmes</a>
+            <a href="/programs" className="rounded-md bg-white/15 px-5 py-3 font-medium hover:bg-white/25">Découvrir nos programmes</a>
           </div>
         </div>
       </section>
@@ -427,9 +468,10 @@ Chaque formation est dispensée par des experts reconnus dans leur domaine et co
       <footer id="contact" className="border-t">
         <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-neutral-600">© {new Date().getFullYear()} Positive Impact Initiatives</div>
-          <div className="flex gap-4 text-sm">
+          <div className="flex flex-wrap items-center gap-4 text-sm">
             <a href="#" className="hover:text-blue-600">Nos réseaux</a>
-            <a href="#" className="hover:text-blue-600">Nous contacter</a>
+            <a href="tel:0647473550" className="hover:text-blue-600">Téléphone: 06 47 47 35 50</a>
+            <a href="mailto:positifimpactafrica@gmail.com" className="hover:text-blue-600">Email: positifimpactafrica@gmail.com</a>
           </div>
         </div>
       </footer>
