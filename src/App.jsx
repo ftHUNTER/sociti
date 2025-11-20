@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import heroLogo from './assets/WhatsApp Image 2025-10-11 at 7.13.49 PM.jpeg'
 import gallery1 from './assets/WhatsApp Image 2025-10-11 at 7.13.50 PM.jpeg'
 import gallery2 from './assets/WhatsApp Image 2025-10-11 at 7.13.52 PM.jpeg'
@@ -7,6 +8,9 @@ import { Link } from 'react-router-dom'
 
 
 export default function App() {
+
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const videoUrl = "https://www.linkedin.com/feed/update/urn:li:lyndaCourse:4164303?utm_source=social_share_send&utm_campaign=copy_link";
 
 
   const photos = [
@@ -73,6 +77,12 @@ export default function App() {
             </p>
             <div className="mt-10 flex gap-3">
               <Link to="/programs" className="rounded-md bg-[#632DE9] px-6 py-3.5 text-white font-semibold hover:bg-[#5321d0]">Découvrir nos initiatives</Link>
+              <button
+                onClick={() => setIsVideoOpen(true)}
+                className="rounded-md bg-white px-6 py-3.5 text-[#632DE9] font-semibold hover:bg-white/90 border"
+              >
+                Voir la vidéo
+              </button>
             </div>
           </div>
           <div className="w-full">
@@ -82,6 +92,30 @@ export default function App() {
           </div>
       </div>
       </section>
+
+      {/* Video modal */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="relative w-full max-w-4xl mx-4">
+            <div className="aspect-video w-full bg-black rounded-lg overflow-hidden">
+              <iframe
+                src={videoUrl}
+                title="LinkedIn Video"
+                className="w-full h-full"
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-4 flex items-center justify-between text-sm text-white">
+              <div>
+                Si la vidéo ne se lance pas ici, ouvrez-la sur LinkedIn :
+                <a href={videoUrl} target="_blank" rel="noopener noreferrer" className="ml-2 underline">Ouvrir sur LinkedIn</a>
+              </div>
+              <button onClick={() => setIsVideoOpen(false)} className="rounded-md bg-white text-[#632DE9] px-3 py-1 font-medium">Fermer</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Programs/Initiatives Gallery - removed as requested */}
 
@@ -120,7 +154,7 @@ export default function App() {
                   <img src={gallery1} alt="Youth Impact Initiatives" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Inclusion socio-économique des jeunes NEETs — Youth Impact Initiatives (YI²)</h4>
+                  <h4 className="font-semibold">Inclusion socio-économique des jeunes NEETs — Youth Impact Initiatives</h4>
                   <p className="mt-2 text-neutral-700 text-sm">Le programme CAP Jeunes vise l’orientation, la construction du projet professionnel et le renforcement des compétences pour améliorer l’employabilité, via plusieurs passeports :</p>
                   <ul className="mt-2 text-neutral-700 text-sm list-disc pl-5 space-y-1">
                     <li><strong>Cap Pro</strong> : s’orienter</li>
@@ -139,7 +173,7 @@ export default function App() {
                   <img src={gallery2} alt="Women Impact Initiatives" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Accompagnement des femmes et leadership — Women Impact Initiatives (WI²)</h4>
+                  <h4 className="font-semibold">Accompagnement des femmes et leadership — Women Impact Initiatives</h4>
                   <p className="mt-2 text-neutral-700 text-sm">Le programme CAP Elles renforce les capacités, l’autonomisation économique et l’inclusion sociale à travers&nbsp;:</p>
                   <ul className="mt-2 text-neutral-700 text-sm list-disc pl-5 space-y-1">
                     <li><strong>Passeport Inclusion Elles</strong></li>
@@ -156,7 +190,7 @@ export default function App() {
                   <img src={gallery3} alt="Green Impact Initiatives" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Durabilité — Green Impact Initiatives (GI²)</h4>
+                  <h4 className="font-semibold">Durabilité — Green Impact Initiatives</h4>
                   <p className="mt-2 text-neutral-700 text-sm">Le programme CAP Green sensibilise à la transition écologique et crée des emplois durables via des actions de sensibilisation, de formation et d’appui à l’économie circulaire et aux énergies propres&nbsp;:</p>
                   <ul className="mt-2 text-neutral-700 text-sm list-disc pl-5 space-y-1">
                     <li><strong>Passeport Vert</strong></li>
