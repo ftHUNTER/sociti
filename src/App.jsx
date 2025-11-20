@@ -3,6 +3,7 @@ import gallery1 from './assets/WhatsApp Image 2025-10-11 at 7.13.50 PM.jpeg'
 import gallery2 from './assets/WhatsApp Image 2025-10-11 at 7.13.52 PM.jpeg'
 import gallery3 from './assets/WhatsApp Image 2025-10-11 at 7.13.52 PM (1).jpeg'
 import { Lightbulb, Briefcase, Compass, FileText } from "lucide-react";
+import { Link } from 'react-router-dom'
 
 
 export default function App() {
@@ -71,7 +72,7 @@ export default function App() {
               « Parce que nous croyons que chacun peut devenir un catalyseur de changement, et que l'action concrète est la clé d'effets significatifs, durables et mesurables, nous construisons, avec vous, un monde meilleur. »
             </p>
             <div className="mt-10 flex gap-3">
-              <a href="/programs" className="rounded-md bg-[#632DE9] px-6 py-3.5 text-white font-semibold hover:bg-[#5321d0]">Découvrir nos initiatives</a>
+              <Link to="/programs" className="rounded-md bg-[#632DE9] px-6 py-3.5 text-white font-semibold hover:bg-[#5321d0]">Découvrir nos initiatives</Link>
             </div>
           </div>
           <div className="w-full">
@@ -458,7 +459,7 @@ Chaque formation est dispensée par des experts reconnus dans leur domaine et co
             </div>
           </div>
           <div className="flex gap-3">
-            <a href="/programs" className="rounded-md bg-white/15 px-5 py-3 font-medium hover:bg-white/25">Découvrir nos programmes</a>
+            <Link to="/programs" className="rounded-md bg-white/15 px-5 py-3 font-medium hover:bg-white/25">Découvrir nos programmes</Link>
           </div>
         </div>
       </section>
