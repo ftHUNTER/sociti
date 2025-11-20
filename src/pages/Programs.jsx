@@ -114,15 +114,15 @@ export default function Programs() {
             {/* intro moved to full-width section above */}
 
             <div id="yi2">
-              <Section id="yi2" title={'Youth Impact Initiatives — CAP Jeunes'} items={bySection.yi2} defaultOpen={true} icon="yi" />
+              <Section id="yi2" title={'CAP Jeunes'} items={bySection.yi2} defaultOpen={true} icon="yi" />
             </div>
 
             <div id="wi2">
-              <Section id="wi2" title={'Women Impact Initiatives — CAP Elles'} items={bySection.wi2} defaultOpen={false} icon="wi" />
+              <Section id="wi2" title={'CAP Elles'} items={bySection.wi2} defaultOpen={false} icon="wi" />
             </div>
 
             <div id="gi2">
-              <Section id="gi2" title={'Green Impact Initiatives — CAP Green'} items={bySection.gi2} defaultOpen={false} icon="gi" />
+              <Section id="gi2" title={'CAP Green'} items={bySection.gi2} defaultOpen={false} icon="gi" />
             </div>
 
             {/* CTA moved below to span full viewport width */}
